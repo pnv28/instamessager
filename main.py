@@ -1,5 +1,4 @@
 from instagrapi import Client
-from apscheduler.schedulers.blocking import BlockingScheduler
 client = Client()
 client.login(username='the_pnv28', password='may8,rat')
 print(f"Succesfully logged in")
@@ -25,7 +24,3 @@ def sendDailyHomie():
         print("DM Successfully sent to Eshaan")
 
 sendDailyHomie()
-
-scheduler = BlockingScheduler()
-scheduler.add_job(some_job, 'interval', hours=24)
-scheduler.start()
