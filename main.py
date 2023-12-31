@@ -4,10 +4,7 @@ from instagrapi import Client
 import time
 
 # Getting Stuff
-from config import username
-from config import password
-from config import homies
-from config import messageForHomies
+from config import username, password, homies, messageForHomies, DailyHomieMessage
 
 root = tk.Tk()
 root.title("Insta Messager by pnv28")
