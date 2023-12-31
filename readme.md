@@ -43,6 +43,11 @@ In Linux or Mac:
 python3 main.py
 ```
 
+### Note
+To Mass Mass Message Press the Button Labeled **Send DailyHomieMessage to the Homies**
+To Close the Button Press the Last Button Instead of the MenuBar Close Button
+If no Messages are sent, means you are being ratelimited by Instagram, Please try Again Later
+
 ## Debugging
 You might recieve an error `No Module Named 'tkinter' `
 It is very simple to fix
