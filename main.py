@@ -10,8 +10,10 @@ from config import homies
 from config import messageForHomies
 
 root = tk.Tk()
-root.title("Insta Messager")
+root.title("Insta Messager by pnv28")
 root.geometry("800x600")
+print("Tool made by pnv28")
+
 
 try:
     loggedinLabel = tk.Label(text="Establishing connection to Instagram")
@@ -24,7 +26,7 @@ try:
 except:
     loggedinLabel= tk.Label(text="Connection Failed\nClosing in 5 seconds", fg="red")
     loggedinLabel.pack()
-    print("Could Not Connect to Instagram | Program Quitting in 5 seconds")
+    print("Could Not Connect to Instagram | Program Quitting in 5 seconds\nMake Sure the Login Credentials are valid")
     time.sleep(5)
     root.destroy()
     exit()
@@ -62,7 +64,6 @@ def spamMessage():
     message = spamMessageEntry.get()
     spamCount = spamNumberEntry.get()
     print("Option to Spam messages has Been Selected")
-    print(f"Task: To Spam {username}\nMessage {message}\nNumber of times {spamCount}")
     userId = client.user_id_from_username(username)
     try:
         for i in range(int(spamCount)):
@@ -107,6 +108,8 @@ spamNumberEntry.pack()
 spamNumberEntry.insert(1, "No. of Mesages")
 spamButton = tk.Button(text="Click Here to Initiate Spam", command=spamMessage)
 spamButton.pack()
+creditsLabel = tk.Label(text="Tool made by pnv28", fg="blue")
+creditsLabel.pack()
 
 closeButton = tk.Button(text="Close Application | Do Not Use the Close button from System Menu Bar", command=exit)
 closeButton.pack()
