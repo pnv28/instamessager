@@ -63,6 +63,7 @@ def sendMessage():
     except:
         print(f"Succesfully sent message to {username}")
         successLabel = tk.Label(text=f"Successfully sent Message to {username}", fg="green")
+        successLabel.pack()
 
 def spamMessage():
     username = spamUsernameEntry.get()
