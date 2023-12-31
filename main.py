@@ -34,7 +34,7 @@ def sendDailyHomie():
     try:
         for i in homies:
             try:
-                client.direct_send("This is a test message from pnv28's instagram messagers programs new Messaging System\nSorry for any distrubances", [int(client.user_id_from_username(i))])
+                client.direct_send(DailyHomieMessage, [int(client.user_id_from_username(i))])
             except:
                 print(f"Message One Sent to {i}")
     except:
