@@ -6,9 +6,17 @@ import time
 # Getting Stuff
 from config import username, password, homies, messageForHomies, DailyHomieMessage
 
+
 root = tk.Tk()
 root.title("Insta Messager by pnv28")
 root.geometry("800x600")
+
+def goodExit():
+    root.destroy()
+    exit()
+
+
+root.protocol("WM_DELETE_WINDOW", goodExit)
 print("Tool made by pnv28")
 
 
