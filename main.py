@@ -4,7 +4,7 @@ from instagrapi import Client
 import time
 
 # Getting Stuff
-from config import username, password, homies, messageForHomies, DailyHomieMessage
+from config import username, password, homies, DailyHomieMessage
 
 
 root = tk.Tk()
@@ -74,7 +74,7 @@ def spamMessage():
     try:
         for i in range(int(spamCount)):
             try:
-                message = message + spamCount
+                message = message + (i+1)
                 client.direct_send(message, [int(userId)])
             except:
                 print(f"Message {i} Sent")
