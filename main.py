@@ -4,14 +4,19 @@ from instagrapi import Client
 import time
 
 # Getting Stuff
-from config import username
-from config import password
-from config import homies
-from config import messageForHomies
+from config import username, password, homies, messageForHomies, DailyHomieMessage
+
 
 root = tk.Tk()
 root.title("Insta Messager by pnv28")
 root.geometry("800x600")
+
+def goodExit():
+    root.destroy()
+    exit()
+
+
+root.protocol("WM_DELETE_WINDOW", goodExit)
 print("Tool made by pnv28")
 
 
@@ -58,6 +63,7 @@ def sendMessage():
     except:
         print(f"Succesfully sent message to {username}")
         successLabel = tk.Label(text=f"Successfully sent Message to {username}", fg="green")
+        successLabel.pack()
 
 def spamMessage():
     username = spamUsernameEntry.get()
@@ -111,7 +117,7 @@ spamButton.pack()
 creditsLabel = tk.Label(text="Tool made by pnv28", fg="blue")
 creditsLabel.pack()
 
-closeButton = tk.Button(text="Close Application | Do Not Use the Close button from System Menu Bar", command=exit)
+closeButton = tk.Button(text="Close Application", command=exit)
 closeButton.pack()
 
 root.mainloop()
